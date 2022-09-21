@@ -3,15 +3,22 @@ public class Main {
         task1();
         task2a();
         task2b();
-        task3();
+        task3a();
+        task3b();
     }
-    private static void task3() {
-        System.out.println("Задание 3");
+    private static void task3b() {
+        System.out.println("Задание 3 - вариант 2");
         String fullName = "Иванов Семён Семёнович";
-        StringBuilder sb = new StringBuilder("Иванов Семён Семёнович");
-        sb.setCharAt(10, 'е');
-        sb.setCharAt(16, 'е');
-        System.out.println("Данные ФИО сотрудника — " + sb);
+        fullName = fullName.replace("ё", "е");
+        System.out.println("Данные ФИО сотрудника — " + fullName);
+    }
+    private static void task3a() {
+        System.out.println("Задание 3 - вариант 1");
+        String fullName = "Иванов Семён Семёнович";
+        StringBuilder fullName1 = new StringBuilder("Иванов Семён Семёнович");
+        fullName1.setCharAt(10, 'е');
+        fullName1.setCharAt(16, 'е');
+        System.out.println("Данные ФИО сотрудника — " + fullName1);
         System.out.println();
     }
     private static void task2b() {
@@ -30,13 +37,7 @@ public class Main {
         String middleName = "Ivanovich";
         String lastName = "Ivanov";
         String fullName = lastName + " " + firstName + " " + middleName;
-        fullName = fullName.replace ("v", "V" );
-        fullName = fullName.replace ("a", "A" );
-        fullName = fullName.replace ("n", "N" );
-        fullName = fullName.replace ("o", "O" );
-        fullName = fullName.replace ("i", "I" );
-        fullName = fullName.replace ("c", "C" );
-        fullName = fullName.replace ("h", "H" );
+        fullName = fullName.replace ("Ivanov Ivan Ivanovich", "IVANOV IVAN IVANOVICH" );
         System.out.println("Данные ФИО сотрудника для заполнения отчета — " + fullName);
         System.out.println();
     }
